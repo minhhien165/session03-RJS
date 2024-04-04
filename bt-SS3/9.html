@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const combineArrays = (...arrays) => {
+            const length = arrays[0].length;
+            const result = [];
+            for (let i = 0; i < length; i++) {
+              const tempArr = [];
+              for (const arr of arrays) {
+                tempArr.push(arr[i]);
+              }
+              result.push(tempArr);
+            }
+          
+            return result;
+          };
+          console.log(combineArrays([1, 2, 3], ['a', 'b', 'c'], [true, false, true]));
+          
+    </script>
+</body>
+</html>
